@@ -29,4 +29,6 @@ jobs:
     - name: mv app file
       env:
         SOURCE_TAG: ${{ steps.get_version.outputs.SOURCE_TAG }}
-      run: echo $SOURCE_TAG
+      run: 
+         echo $SOURCE_TAG
+         mv test test/$SOURCE_TAG/test.apk
