@@ -38,7 +38,7 @@ jobs:
 #      run: ./gradlew assemble${{ github.event.inputs.variants }}
     
     - name: Upload APK
-      run: pwd
+      run: ls -l ./app/build/outputs/apk/debug
 #      uses: actions/upload-artifact@v3
 #      with:
 #        name: my-artifact
