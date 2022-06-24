@@ -34,14 +34,14 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-#    - name: Build with Gradle
-#      run: ./gradlew assemble${{ github.event.inputs.variants }}
+    - name: Build with Gradle
+      run: ./gradlew assemble${{ github.event.inputs.variants }}
     
     - name: Upload APK
-      run: ls -l ./app/build/outputs/apk/debug
-#      uses: actions/upload-artifact@v3
-#      with:
-#        name: my-artifact
-#        path: path/to/artifact/
+#      run: ls -l ./app/build/outputs/apk/debug
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: ./app/build/outputs/apk/debug
       
       
